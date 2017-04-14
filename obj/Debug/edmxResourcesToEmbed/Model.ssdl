@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SysOdontoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Paciente">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+    <Property Name="Endereco" Type="varchar" MaxLength="100" />
+    <Property Name="Numero" Type="varchar" MaxLength="10" />
+    <Property Name="Bairro" Type="varchar" MaxLength="50" />
+    <Property Name="Cep" Type="varchar" MaxLength="15" />
+    <Property Name="Cidade" Type="varchar" MaxLength="50" />
+    <Property Name="UF" Type="varchar" MaxLength="2" />
+    <Property Name="DataNascimento" Type="date" />
+    <Property Name="Ativo" Type="bit" />
+    <Property Name="Telefone" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="SysOdontoModelStoreContainer">
+    <EntitySet Name="Paciente" EntityType="Self.Paciente" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
